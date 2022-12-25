@@ -1,6 +1,8 @@
 var button = document.getElementById("enter");
 var input = document.getElementById("userinput");
 var ul = document.querySelector("ul");
+var li  = document.querySelectorAll("li");
+
 
 function inputLength() {
 	return input.value.length;
@@ -24,6 +26,17 @@ function addListAfterKeypress(event) {
 		createListElement();
 	}
 }
+
+function deleteListItemAfterClick (e){
+console.log(e,"clicked")
+document.removeChild(e.target.firstChild)
+};
+
+
+li.forEach(function(liitem){
+	liitem.addEventListener("click", deleteListItemAfterClick)
+});
+
 
 button.addEventListener("click", addListAfterClick);
 
