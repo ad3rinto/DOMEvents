@@ -27,8 +27,12 @@ function addListAfterKeypress(event) {
 	}
 }
 
-function deleteListItemAfterClick (){
-document.removeChild(li)
+function deleteListItemAfterClick (e){
+	if(e.target.tagName == "LI"){
+		console.log(e.target.innerText)
+
+	}
+
 };
 
 
