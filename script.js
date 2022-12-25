@@ -35,9 +35,15 @@ function deleteListItemAfterClick (e){
 
 };
 
+function addDoneToList(e){
+	e.target.classList.toggle("done")
+
+}
+
+
 
 li.forEach(function(liitem){
-	liitem.addEventListener("click", deleteListItemAfterClick)
+	liitem.addEventListener("click", addDoneToList)
 });
 
 
