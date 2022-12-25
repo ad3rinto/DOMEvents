@@ -27,9 +27,8 @@ function addListAfterKeypress(event) {
 	}
 }
 
-function deleteListItemAfterClick (e){
-console.log(e,"clicked")
-document.removeChild(e.target.firstChild)
+function deleteListItemAfterClick (){
+document.removeChild(li)
 };
 
 
